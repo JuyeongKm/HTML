@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>입력양식</title>
+</head>
+<body>
+<form method="get">
+아이디 : <input type="text" name="u_id" value="id를 입력하세요"><br>
+비밀번호 : <input type="password" name="u_pw"><br>
+성별 : <input type="radio" id="m" name="sex" value="male"> <label for="m">남자</label> &nbsp <input type="radio" id="f" name="sex" value="female" checked> <label for="f">여자</label><br>
+취미 : <input type="checkbox" name="hobby" value="read"> 독서 &nbsp; <input type="checkbox" name="hobby" value="movie"> 영화 &nbsp; <input type="checkbox" name="hobby" value="sport">스포츠<br>
+직업 : <select name="job" size="1">
+<option value="student">학생</option>
+<option value="teacher">교사</option>
+<option value="saled">자영업</option>
+<option value="other">기타</option>
+</select>
+
+예약 날짜 : <input type="date" name="last_date" min="2023-03-02"><br>
+예약 시간 : <input type="time" name="time_from" min="09:00" max="18:00">에서 <input type="time" name="time_to" min="09:00" max="18:00">까지<br>
+<p>요청사항<br>
+<textarea name"comment" cols="40" rows="5">전달할 사항을 적으세요:</textarea>
+</p>
+
+<input type="submit" value="전송하기"> &nbsp; <input type="reset" value="취소하기">
+<input type="button" value="확인하기" onclick="alert('결과값 확인');">
+</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1 align="center">WebClass.ME</h1>
+<hr width="800"><br>
+<form method="get" action="form.js">
+<fieldset>
+<legend>로그인</legend>
+아이디: <input type="text" name="id" size="20"><br>
+비밀번호: <input type="password" name="pw" size="20"><br>
+</fieldset>
+<br>
+<fieldset>
+<legend>도서검색</legend>
+도서명: <input type="text" name="book" size="80"><br>
+검색범위: <input type="radio" name="s_type" value="keyword">키워드 <input type="radio" name="s_type" value="content">본문내용<br>
+자료 유형: <input type="checkbox" name="books" value="all">전체 <input type="checkbox" name="books" vlaue="book"> 단행본 <input type="checkbox" name="books" value="paper">학술지 <input type="checkbox" name="books" value="non">비도서<br>
+</fieldset>
+<fieldset>
+<legend>오픈 리소스 검색</legend>
+키워드: <input type="search" name="key" size="80"><br>
+검색범위 : <select name="s">
+ <option value="riss">RISS</option>
+ <option value="ndsl"> NDSL</option>
+ <option value="naver">네이버</option>
+ <option value="lib">국회도서관</option>
+</select><br><br>
+</fieldset>
+
+<input type="reset" value="지우기"&nbsp; <input type="submit" value="전송하기">
+<br></form> 
+</body>
+</html>

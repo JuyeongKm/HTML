@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>팩토리얼 구하기</title>
+</head>
+<body>
+<h3>팩토리얼 구하기</h3>
+ <script>
+   var num=prompt("팩토리얼값을 입력하세요");
+   var for_result=1;
+   for (i=1;i<=num;i++){
+	for_result=for_result*i;
+   }
+   document.write(num+"! = "+for_result+"<br/>");
+
+   var while_result=1;
+   var num2=num;
+   while(num2!=1){
+	while_result=while_result*num2;
+	num2--;
+    }
+    document.write(num+"! = "+while_result);
+ </script>
+</body>
+</html>

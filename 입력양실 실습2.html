@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1 align="center">WebClass.ME</h1>
+<hr width="800"><br>
+<h3>도서 대출 예약</h3>
+<form method="get" action="form.js">
+이름 : <input type="text" name="name" size="15"><br>
+핸드폰 : <input type="tel" name="cell" pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}" placeholder="010-000*-0000"><br>
+이메일 : <input type="email" name="m_mail"> <br>
+<br>
+도서명 : <input type="search" name="book" size="60"><br>
+예약희망일 : <input type="date" name="r" min="2023-04-12"><br>
+수령시간 :  <input type="time" name="t_f" min="09:00" max="17:00">에서 <input type="time" name="t_t" min="09:00" max="17:00"><br>
+기타 요청 : 
+<textarea name="req cols="50" rows="5">기타 요청이 있으면 작성해주세요 :)</textarea>
+<br> 
+<input type="submit" value="예약하기">
+</form> 
+</body>
+</html>

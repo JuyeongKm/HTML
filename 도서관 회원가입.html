@@ -1,0 +1,26 @@
+<h3>도서관 회원가입</h3>
+<form method="get" action="form_app.js"> <ul>
+<li>성명: <input type="text" name="person"> </li><br>
+<li>성별: <input type="radio" name="sex" value="male">남성
+<input type="radio" name="sex" value="female">여성</li><br>
+<li>직업: <select name="job" size="1"> </li>
+<option>학생</option> <option>회사원</option>
+<option>자영업</option> <option>기타</option>
+</select><br><br>
+<li>관심분야 도서
+(복수선택 가능)</li><br>
+- 분야: <input type="checkbox" name="books" value=" novel">소설류
+<input type="checkbox" name="books" value=" politics ">정치
+<input type="checkbox" name="books" value=" economy ">경제
+<input type="checkbox" name="books" value=" society ">사회
+<input type="checkbox" name="books" value=" computer “>컴퓨터
+<input type=“checkbox” name=“books” value=“ language “>어학
+<input type=“checkbox” name=“books” value=“hobby ">취미
+<input type="checkbox" name="books" value=" utility ">실용
+<br><br>
+<li>건의사항: </li><br>
+<textarea name="comments" rows="4" cols="40"></textarea> 
+</ul>
+<input type="submit" value="신청">
+<input type="reset" value="취소">
+</form>
