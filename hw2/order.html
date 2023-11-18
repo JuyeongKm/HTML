@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>음료 주문</title>
+
+<style>
+	@font-face{
+		font-family:'BMHANNAAir_ttf';
+		src: local('BMHANNAAir_ttf'),
+			url('BMHANNAAir_ttf.eot'),
+			url('BMHANNAAir_ttf.woff') format('woff'),
+			url('BMHANNAAir_ttf.ttf') format('truetype');
+	}
+	.font{
+		font-family: 'BMHANNAAir_ttf', sans-serif;
+</style>
+</head>
+
+<body link="#496CDF">
+<h1 class="font">주문서</h1></td>
+
+<script>
+ var cate = ["카페","양식","컵밥","찌개"]
+ var food = prompt("주문할 메뉴의 카테고리번호를 골라주세요[1.카페 / 2.양식 / 3.컵밥 / 4.찌개]");
+ var choice = prompt("어떤 메뉴를 주문하시겠습니까?");
+ document.write("<h4 class='font'>"+cate[food-1]+"코너에서 "+choice+" 주문하셨습니다.</h4>");
+
+  switch(choice) {
+   case"아메리카노":
+	document.write("<h4 class='font'>1500원입니다.</h4>");
+	break;
+   case"햄치즈샌드위치":case"카야크림샌드위치":
+	document.write("<h4 class='font'>2400원입니다.</h4>");
+	break;
+   case"카페라떼":case"카푸치노":
+	document.write("<h4 class='font'>2700원입니다.</h4>");
+	break;
+   case"아이스티샷추가":
+	document.write("<h4 class='font'>2800원입니다.</h4>");
+	break;
+   case"바닐라라떼":case"헤이즐넛라떼":case"핫초코":
+	document.write("<h4 class='font'>3000원입니다.</h4>");
+	break;
+   case"카라멜마끼아또":case"모카라떼":
+	document.write("<h4 class='font'>3300원입니다.</h4>");
+	break;
+   case"딸기스무디":case"망고스무디":case"에그번":case"레몬에이드":case"자몽에이드":case"녹차라떼":case"일반라면":
+	document.write("<h4 class='font'>3500원입니다.</h4>");
+	break;
+   case"요거스무디":case"초코스무디":case"밀크티":case"순두부컵밥":
+	document.write("<h4 class='font'>3800원입니다.</h4>");
+	break;
+   case"바닐라쉐이크":
+	document.write("<h4 class='font'>3900원입니다.</h4>");
+	break;
+   case"딸기요거스무디":case"망고요거스무디":case"딸기쉐이크":case"초코쉐이크":case"매운라면":case"치즈라면":
+	document.write("<h4 class='font'>4000원입니다.</h4>");
+	break;
+   case"커피쉐이크":
+	document.write("<h4 class='font'>4200원입니다.</h4>");
+	break;
+   case"우동":case"쫄면":case"비건야채컵밥":case"참치마요컵밥":case"참치김치컵밥":
+	document.write("<h4 class='font'>4500원입니다.</h4>");
+	break;
+   case"제육컵밥":case"불고기컵밥":
+	document.write("<h4 class='font'>5500원입니다.</h4>");
+	break;
+   case"눈꽃치즈불고기":case"눈꽃치즈제육":
+	document.write("<h4 class='font'>6000원입니다.</h4>");
+	break;
+   case"돈까스":case"라면&유부초밥":case"참치마요&미니떡볶이":case"참치김치&미니떡볶이":
+	document.write("<h4 class='font'>6500원입니다.</h4>");
+	break;
+   case"우동&미니돈까스":case"쫄면&미니돈까스":case"돈까스 카레덮밥":
+	document.write("<h4 class='font'>7000원입니다.</h4>");
+	break;
+  }
+</script>
+
+
+<h3 class="font"><a href="index.html" style="text-decoration:none;"><strong>[메뉴 보기]</strong></a></h3><br>
+</body>
+</html>
+
