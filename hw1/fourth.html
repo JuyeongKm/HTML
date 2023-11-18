@@ -1,0 +1,340 @@
+<html>
+<head>
+<title> 폼 활용하기 </title> 
+<style>
+body { background-color:#B5D2F1; n:10px; }
+article { display:block; width:800px; background-color:#D9EBFF; float:left; margin:10px; border-radius:25px 11px}
+inside { display:block; width:570px; background-color:#FFFFFF; float:left; margin:10px; border-radius:25px 11px}
+inside2 { display:block; width:350px; background-color:#EEF7FF; float:left; margin:10px;}
+inside3 { display:block; width:170px; background-color:#EEF7FF; float:left; margin:10px;}
+inside4 { display:block; width:370px; background-color:#EEF7FF; float:left; margin:10px;}
+inside5 { display:block; width:200px; background-color:#EEF7FF; float:left; margin:10px;}
+</style>
+</head>
+
+<body>
+<article>
+<h3 align="center"><strong>① 폼 이해하기</h3></strong>
+  <ul>
+   <li>&lt;form&gt; 요소의 사용</li>
+    <ul>
+     <li>회원가입, 상품구매, 키워드 검색 등 사용자로부터 정보를 받을 때</li>
+     <li>사용자와 애플리케이션이 상호작용</li>
+      <p>- 사용자 입력 ⇒ 전송버튼 ⇒ 애플리케이션에 전달 ⇒ 실행결과 반환</p>
+    </ul>
+  </ul>
+
+ <ul>
+  <li>&lt;form&gt; 요소의 역할</li>
+   <ul>
+    <li>사용자가 입력하는 정보를 하나로 묶어서 애플리케이션에 전달</li>
+     <p>- 다양한 입력 양식을 그룹핑하고 전송방법을 설정</p><br>
+    <li>&lt;form&gt; 요소 내 사용자의 정보 입력 양식</li>
+     <p>- &lt;input&gt;, &lt;texterea&gt;, &lt;select&gt; 등의 입력 요소를 이용</p>
+   </ul>
+ </ul>
+
+ <ul>
+  <li>&lt;form&gt; 요소</li>
+<inside>&lt;form name=”이름” method=”get/post” action=”애플리케이션 주소"&gt;</inside><br><br>
+   <ul>
+    <li>method 속성 : 데이터 전송 방식 지정</li>
+     <p>- get방식: 전송할 데이터를 URL 주소 뒤에 포함</p>
+       <p><h6>&nbsp;&nbsp;&nbsp;- 예, http://… ch04/app.js?person=%C8%AB%B1%E6&sex=male& jobs=…</h6></p>
+       <p><h6>&nbsp;&nbsp;&nbsp;- 간단한 데이터에는 편리, 그러나 보안에 취약</h6></p>
+     <p>- post방식: 프로그램의 입출력 방식을 사용, 데이터 양에 제한 없다</p>
+    <li>action 속성 : 데이터 처리할 애플리케이션 주소 (웹서버 경우 URL)</li>
+    <li>name속성 : 폼 요소에 대한 이름</li><br>
+   </ul>
+ </ul>
+</article>
+
+
+<article>
+<h3 align="center"><strong>② 기본 형식으로 입력하기</h3></strong>
+<ul>
+   <li>기본적인 입력 폼의 형태</li>
+    <ul>
+     <li>&lt;form&gt; 요소 안에 &lt;input&gt;, &lt;textarea&gt;, &lt;select&gt; 등 요소</li>
+    </ul><br>
+  <li>&lt;input&gt; 요소의 속성</li>
+<inside>&lt;input type=”입력 형식” name=”변수명” value=”입력 값"&gt;</inside><br><br>
+   <ul>
+    <li>type 속성은 입력 폼의 유형</li>
+     <p>- 텍스트 관련: text, password</p>
+     <p>- 선택 관련 : radio, checkbox</p>
+     <p>- 버튼 : submit, reset, button, image</p>
+     <p>- 기타 : file, hidden</p>
+   </ul>
+ </ul>
+<hr>
+<p><strong><font color="orange">▶</font>텍스트 입력</strong></p>
+ <ul>
+  <li>문자열 입력 필드(한 줄)</li>
+<inside>&lt;input type=”text” name=”변수명” value=”초기값”&gt;</inside><br><br>
+   <ul>
+    <li>name 속성 : 애플리케이션에 전달될 변수명</li>
+    <li>value 속성 : 입력 받은 값을 전달 (입력창 초기문자)</li>
+   </ul>
+ </ul>
+
+ <ul>
+  <li>암호 입력 필드</li>
+<inside>&lt;input type=”password” name=”변수명”&gt;</inside><br><br>
+   <ul>
+    <li>보안이 필요한 문자 입력, ‘•’ 으로 표시 (더 이상 보호 기능 없음)</li>
+   </ul>
+ </ul>
+
+ <ul>
+  <li>텍스트 영역 필드 (여러 줄): &lt;textarea&gt; 요소</li>
+<inside>&lt;textarea name=”이름” cols=”열의 수” rows=”행의 수”&gt;&lt;/textarea&gt;</inside><br><br>
+   <ul>
+    <li>표시 영역보다 많은 텍스트를 입력하면 스크롤바</li>
+   </ul>
+<inside2>
+<h3> &nbsp;&nbsp;문자열, 암호 입력 및 텍스트 영역</h3>
+ <form method="post" action="form_app.js">
+  &nbsp;&nbsp;아이디 : &nbsp; <input type="text" name ="id" value="ID 입력하세요"> <br>
+  &nbsp;&nbsp;비밀번호: <input type="password" name="pwd">
+<p>&nbsp;&nbsp;요청사항: <br>
+  &nbsp;&nbsp;<textarea name="comment" cols="40" rows="5"> 전달하실 내용을 적으세요:
+  </textarea>
+</form></inside2><br><br><br><br><br><br><br><br><br><br><br><br>
+ </ul>
+
+<hr>
+<p><strong><font color="orange">▶</font>선택항목의 입력</strong></p>
+ <ul>
+  <li>라디오 버튼</li>
+<inside>&lt;input type=”radio” name=”변수명” value=”선택값” checked &gt;</inside><br><br>
+   <ul>
+    <li>name 속성값이 같은 그룹에서 value 값을 하나만 선택하여 전달</li>
+    <li>예, “member=yes&sex=male”의 형태로 전달</li>
+   </ul>
+<inside3>성별 : <input type="radio" name="sex" value="male">남성
+<input type="radio" name="sex" value="male">여성</inside3><br><br>
+ </ul>
+
+ <ul>
+  <li>체크박스 선택</li>
+<inside>&lt;input type=”checkbox” name=”변수명” value=”선택값” checked&gt;</inside><br><br>
+   <ul>
+    <li>체크박스에 표시된 모든 value 속성값 들이 애플리케이션으로 전송</li>
+   </ul>
+<inside4>취미(중복선택) : 
+  <input type="checkbox" name="hobby" value="read">독서
+  <input type="checkbox" name="hobby" value="movie">영화
+  <input type="checkbox" name="hobby" value="music">음악
+  <input type="checkbox" name="hobby" value="sports">스포츠</inside4><br><br>
+ </ul>
+
+ <ul>
+  <li>선택목록에서 선택: &lt;select&gt; 요소 내에 &lt;option&gt; 항목</li>
+<inside>&lt;textarea name=”이름” cols=”열의 수” rows=”행의 수”&gt;&lt;/textarea&gt;</inside><br><br>
+   <ul>
+    <li>드롭다운 형태(size= 1), 혹은 스크롤 박스 형태(size > 1)</li>
+    <li>multiple 속성 : 다중 선택</li>
+    <li각 항목은 &lt;select&gt; 요소 내에서 &lt;option&gt; 요소로 정의</li>
+   </ul>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="job" size="1" >
+  <option value=”student” selected>학생</option>
+  <option value=”company”>회사원</option>
+  <option value=”teacher”>교사</option>
+  <option value=”sales”>자영업</option> 
+  <option value=”others”>기타</option>
+</select><br>
+ </ul>
+
+<hr>
+<p><strong><font color="orange">▶</font>버튼 입력</strong></p>
+ <ul>
+  <li>전송 버튼: 입력 데이터 전달</li>
+<inside>&lt;input type=”submit” value=”버튼라벨”&gt;</inside><br><br>
+   <ul>
+    <li>&lt;form&gt; 요소에 있는 모든 입력 데이터가 &lt;form&gt;의 action 속성에서 지정한
+애플리케이션 프로그램으로 전송</li>
+   </ul>
+ </ul>
+
+ <ul>
+  <li>초기화 버튼</li>
+<inside>&lt;input type=”button” value=”버튼라벨”&gt;</inside><br><br>
+ </ul>
+
+ <ul>
+  <li>이미지 버튼</li>
+<inside>&lt;input type=”image” src=”이미지 파일” alt=”대체 문자열"&gt;</inside><br><br>
+ </ul>
+
+<inside4><form method="get" action="form_app.js">
+<p>&nbsp; &nbsp; 취미
+(중복선택) :
+<input type="checkbox" name="hobby" value="read">노래 듣기
+<input type="checkbox" name="hobby" value="movie" checked>유튜브 보기
+</p>
+&nbsp; &nbsp; 직업: 
+<select name="job" size=“3" multiple> 
+<option value="student" selected>학생</option>
+<option value="company">회사원</option>
+<option value="teacher">교사</option>
+</select> <hr width="350" align="left">
+&nbsp; &nbsp; <input type="submit" value="전송하기"> 
+&nbsp; &nbsp; <input type="reset" value="초기화"> 
+&nbsp; &nbsp; <input type="button" value="확인하기" onClick="alert('입력값 확인')"> 
+</form></inside4><br><br><br><br><br><br><br><br><br><br>
+
+
+<hr>
+<p><strong><font color="orange">▶</font>기타 입력 필드</strong></p>
+ <ul>
+  <li>파일 선택하기: &lt;input type="file"&gt;</li>
+<inside>&nbsp;&nbsp;파일 업로드하기 &lt;br&gt;<br>&nbsp;
+&lt;input type="file" name="myfile"&gt;</inside><br><br><br>
+ </ul>
+
+ <ul>
+  <li>데이터 숨김</li>
+<inside>&lt;input type=”hidden” name=”변수명” value=값”&gt;</inside><br><br>
+  <ul>
+   <li>시스템에서 특정 데이터를 처리하고 싶을 때, 예: 사용자 IP 주소</li>
+  </ul>
+ </ul>
+
+ <ul>
+  <li>텍스트 라벨: 특정 입력 필드에 연결</li>
+<inside>&lt;label for=”입력아이디”&gt;</inside><br><br>
+  <ul>
+   <li>데이터 전달에는 영향이 없음</li>
+   <li>버튼이외의 텍스트영역을 선택해도 선택이 가능</li>
+  </ul>
+<inside3>성별: <label for="male">남성</label>
+<input type="radio" name="sex" id="male" value="male">
+<label for="female">여성</label>
+<input type="radio" name="sex" id="female" value="female"></inside3><br><br>
+ </ul>
+
+<hr>
+<p><strong><font color="orange">▶</font>입력 필드의 그룹핑</strong></p>
+ <ul>
+  <li>그룹핑: &lt;fieldset&gt;</li>
+   <ul>
+    <li>폼 양식을 그룹핑하는 범위를 지정</li>
+     <p>- 사용자의 시각적 편의를 위해서 제공</p>
+     <p>- 입력 필드의 그룹 주위에 기본 스타일로 테두리 선</p>
+    <li>name 속성 : 그룹의 이름을 지정하는</li>
+    <li>form 속성 : 폼과 연결</li>
+    <li>disabled 속성 : 그룹 내의 모든 하위 입력 요소들을 비활성화</li>
+   </ul>
+ </ul>
+
+ <ul>
+  <li>그룹의 라벨: &lt;legend&gt;</li>
+   <ul>
+    <li>그룹을 구분하기 위한 그룹의 제목 라벨</li>
+     <p>- &lt;fieldset&gt; 요소에 포함되는 첫 번째 자식 요소로서 한번만 사용</p>
+     <p>- 그룹 라벨의 스타일은 그룹을 구분하는 선의 중간에 걸쳐서 표시</p>
+   </ul>
+ </ul>
+
+</article>
+
+
+<article>
+<h3 align="center"><strong>③ 고급 형식으로 입력하기</h3></strong>
+  <ul>
+   <li>&lt;input&gt; 요소에 추가된 새로운 입력 속성</li>
+    <ul>
+     <li>텍스트 관련: email, URL, tel, search</li>
+     <li>날짜와 시간 : date, month, week, time, datetime, datetime-local</li>
+     <li>색상 및 숫자: number, range, color</li>
+    </ul>
+  </ul>
+
+ <ul>
+  <li>유효성 검사</li>
+   <ul>
+    <li>이메일 입력 필드에 다른 형식으로 입력했거나, 필수적으로 입력해야 하는 필드가
+입력 되지 않았을 때 폼을 전송하지 않음</li>
+     <p>- 검사 대상: &lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;, &lt;button&gt;에서 submit 일 때</p>
+    <li>required 속성, novalidate 속성</li>
+   </ul>
+ </ul>
+
+<hr>
+<p><strong><font color="orange">▶</font>서식이 있는 텍스트 입력</strong></p>
+ <ul>
+  <li>&lt;input&gt; 요소의 추가된 서식이 있는 텍스트 관련 속성</li>
+   <ul>
+    <li>이메일 주소입력</li>
+<inside>&lt;input type=”email”&gt;</inside><br>
+     <p><h5>이메일 주소가 존재 하는지 까지는 확인 불가 이나, 형식이 맞게 작성되었는지는 확인</h5></p>
+   </ul>
+
+   <ul>
+    <li>url 주소입력</li>
+<inside>&lt;input type=”url”&gt;</inside><br>
+     <p><h5>인터넷 주소 표기 규정에 맞게 “http://” 가 추가 되었는지 확인해 줌</h5></p>
+     <p><h5>또는 value 속성으로 미리 “http://” 를 지정할 수도 있다</h5></p>
+   </ul>
+
+   <ul>
+    <li>전화번호 입력</li>
+<inside>&lt;input type=”tel”&gt;</inside><br>
+     <p><h5>pattern 속성 : 원하는 전화번호와 자리수에 유효한 패턴을 지정</h5></p>
+      <p><h6>&nbsp;&nbsp;&nbsp;- 정규 표현식으로 정의, 자바스크립트에서 사용하는 패턴과 동일</h6></p>
+      <p><h6>&nbsp;&nbsp;&nbsp;- pattern=”[A-Za-z]{no}” , pattern=”[0-9]{no}” , pattern=”[0-9]+” , pattern=”[A-Za-z0-9]{min, max}”</h6></p>
+     <p><h5>placeholder 속성 : 입력할 자리수 표시 (단순히 표시만)</h5></p>
+   </ul>
+
+   <ul>
+    <li>검색창 입력</li>
+<inside>&lt;input type=”search”&gt;</inside><br>
+     <p><h5>검색어를 입력하면 오른쪽에 “X”가 표시되어 입력한 검색어를 취소할 수 있음</h5></p>
+   </ul>
+</ul>
+
+<hr>
+<p><strong><font color="orange">▶</font>날짜와 시간 입력</strong></p>
+ <ul>
+  <li>날짜 입력 (일, 월, 주)</li>
+   <ul>
+    <li>&lt;input type=”date”&gt; 연-월-일</li>
+    <li>&lt;input type=”month”&gt; 연-월</li>
+    <li>&lt;input type=”week”&gt; 연-주(번호순서1월 첫 수가 'W01')</li>
+     <p><h5>min 속성, max 속성, value 속성</h5></p>
+     <p><h5>속성값은 ‘연-월-일’ 형식으로 날짜 입력</h5></p>
+   </ul>
+<inside5><p><h5>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="date"&gt;</h5></p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="date">
+<p><h5>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="month"&gt;</h5></p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="month">
+<p><h5>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="week"&gt;</h5></p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="week"></inside5><br><br><br><br><br><br><br><br><br><br><br><br>
+  </ul><br>
+
+   <ul>
+    <li>시간 입력</li>
+     <ul>
+      <li>&lt;input type=”time”&gt;: “위/아래” 버튼으로 시간 조정</li>
+      <li>&lt;input type=”datetime”&gt;: UTC 국제표준 시간대</li>
+      <li>&lt;input type=”datetime-local”&gt;: 현지 시간</li>
+   </ul>
+
+   <ul>
+    <li>날짜 및 시간 입력 제한</li>
+     <ul>
+      <li>날짜 2018.8.8 이후 입력 가능</li>
+      <li>시간 오전 09:00 ~ 오후 6:00 사이 입력 가능</li>
+<inside><form method="get" action="form_app.js"> <br>
+  &nbsp;&nbsp;&nbsp;예약 희망일 : <input type="date" name="last_date" min="2018-08-08"><br><br>
+  &nbsp;&nbsp;&nbsp;예약 시간 : <input type="time" name="time_from" min="09:00" max="18:00">
+  에서 <input type="time" name="time_until" min="09:00" max="18:00">사이<br><br>
+  <hr>
+ &nbsp;&nbsp;&nbsp; <input type="submit" value="예약하기"/>
+</form></inside>
+   </ul>
+</ul>
+</article>
+
+
+
+</body>
+</html>

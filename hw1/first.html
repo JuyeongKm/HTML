@@ -1,0 +1,125 @@
+<html>
+<head>
+<title> html5 문서 기본 이해하기 </title> 
+<style>
+body { background-color:#B5D2F1; n:10px; }
+article { display:block; width:800px; background-color:#D9EBFF; float:left; margin:10px; border-radius:25px 11px}
+inside { display:block; width:600px; background-color:#FFFFFF; float:left; margin:10px; border-radius:25px 11px}
+</style>
+
+<head>
+<body>
+<article>
+<h3 align="center"><strong>① 문서 기본 구조</h3></strong>
+<ul>
+ <li>HTML (HyperText Markup Language)</li>
+  <ul>
+   <li>웹(WWW)을 위한 하이퍼텍스트 문서 작성 언어</li>
+   <li>웹브라우저에서 보여지는 문서의 내부형식을 규정</li>
+   </ul><br>
+ <li>HTML 형식의 파일</li>
+   <ul>
+   <li>첫줄에 DOCTYPE 선언, 다음줄부터 요소들(elements)</li>
+   <li>파일 확장자는 *.htm 혹은 *.html</li>
+    </ul><br>
+ <li>HTML 문서 저작도구 사용하기</li>
+   <ul>
+   <li>메모장을 열어 HTML 문서를 작성</li>
+   <li>파일 확장자는 *.htm 혹은 *.html</li>
+   <li>파일 – 다름 이름으로 저장 메뉴 클릭</li>
+    </ul><br>
+ <li>웹 브라우저에서 HTML 문서 실행하기</li>
+   <ul>
+   <li>웹 브라우저는 하이퍼텍스트 문서를 탐색하는 도구</li>
+   <li>HTML로 작성된 웹 문서를 볼 수 있게 해주는 프로그램</li>
+    </ul><br>
+</ul>
+</article>
+
+<article>
+<h3 align="center"><strong>② 단락 제목과 줄</h3></strong>
+<ul>
+ <li>제목(Headline) - &lt;hn&gt; 요소</li>
+  <ul>
+   <li>문서의 제목이나 머리글의 글자 크기(n=1~6)를 지정</li>
+   <li>&lt;H1&gt;의 값이 가장 큰 글씨체를 나타내며, &lt;H6&gt;의 값이 가장 작은 글씨체</li>
+    </ul><br>
+ <li>단락(Paragraph) - &lt;p&gt; 요소</li>
+  <ul>
+   <li>절이나 단락을 구분하는 요소</li>
+   <li>줄을 바꿈과 동시에 한 줄 띄 되는 효과로 &lt;p&gt;요소 앞뒤에 약간의 여백이 자동으로 추가됨</li>
+    </ul><br>
+ <li>줄 바꿈(Line Break) - &lt;br&gt; 요소</li>
+  <ul>
+   <li>줄과 줄 사이에 줄 바꿈을 하기 위해 사용</li>
+   <li>연속해서 사용하면 여러 줄의 빈 줄 삽입이 가능함</li>
+    </ul><br>
+</ul><br>
+</article>
+
+<article>
+<h3 align="center"><strong>③ 단락 꾸미기</h3></strong>
+<ul>
+ <li>가로줄(Horizontal Line) - &lt;hr&gt; 요소</li>
+  <ul>
+   <li>문단 간 혹은 내용 사이에 구분을 확실히 하고자 할 때</li>
+   <li>단독태그로 사용됨</li>
+   <li>아무 속성도 사용하지 않으면 기본적으로 선의 길이가 화면 크기에 맞추어 나오게 되고,<br>음각된 선이 그어짐</li>
+    </ul><br>
+ <li>작성된 형식 유지(Pre- formatted Text) - &lt;pre&gt; 요소</li>
+  <ul>
+   <li>화면에 입력한 상태 그대로 보이고자 할 때</li>
+   <li>공백문자(whitespace character): 빈칸, 탭, 줄 바꿈</li>
+    </ul><br>
+ <li>단락 인용(Block Quotation): &lt;blockquote&gt;</li>
+  <ul>
+   <li>다른 글의 내용을 단락 단위로 인용하여 포함시킬 때</li>
+   <li>들여쓰기로 구분하여 표시</li>
+    </ul><br>
+</ul><br>
+</article>
+
+<article>
+<h3 align="center"><strong>④ 다양한 텍스트 꾸미기</h3></strong>
+<ul>
+ <li>하이라이트 효과: &lt;mark&gt; 요소</li>
+  <ul>
+   <li>텍스트를 눈에 띄도록 마킹하고자 할 때, 형광펜 표시</li>
+    </ul><br>
+ <li>첨자(Subscript & Superscript): &lt;sub&gt;, &lt;sup&gt;</li>
+</ul><br>
+<inside><p>&nbsp;✔️HTML5 비권장(deprecated) 요소 :
+<ul>
+	 <li>요소로는 가급적 문서 구조나 의미가 있는 특성을 표현</li>
+	  <ul>
+	   <li>문서의 출력 모양은 스타일시트를 사용하도록 권장</li>
+	  </ul><br>
+	 <li>텍스트의 모양 관련 요소</li>
+	  <ul>
+	   <li>&lt;font&gt;, &lt;center&gt;, &lt;u&gt;, &lt;b&gt;, &lt;i&gt, &lt;blink&gt;</li>
+	  </ul>
+</p></inside>
+</article>
+
+<article>
+<h3 align="center"><strong>⑤ 목록 나열</h3></strong>
+<ul>
+ <li>순서 없는 목록(Unordered List) - &lt;ul&gt; 요소</li>
+  <ul>
+   <li>순서가 없는 목록을 적을 때 사용</li>
+   <li>나열된 항목(list item)에는 하위 요소인 &lt;li&gt;를 사용</li>
+    </ul><br>
+ <li>순서 있는 목록(Ordered List) - &lt;ol&gt; 요소</li>
+  <ul>
+   <li>순서가 있는 목록을 적을 때 사용</li>
+   <li>나열된 항목(list item)에는 하위 요소인 &lt;li&gt;를 사용</li>
+    </ul><br>
+ <li>정의 목록 (Description List/Definition List)- &lt;dl&gt; 요소</li>
+  <ul>
+   <li>사전과 같이 용어나 단어를 설명하는 목록을 만들때</li>
+   <li>용어(term)는 &lt;dt&gt; 요소, 설명(description)은 &lt;dd&gt; 요소</li>
+    </ul><br>
+</ul>
+</article>
+
+</html>

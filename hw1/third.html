@@ -1,0 +1,283 @@
+<html>
+<head>
+<title> 링크와 멀티미디어 표현하기 </title> 
+<style>
+body { background-color:#B5D2F1; n:10px; }
+article { display:block; width:800px; background-color:#D9EBFF; float:left; margin:10px; border-radius:25px 11px}
+inside { display:block; width:600px; background-color:#FFFFFF; float:left; margin:10px; border-radius:25px 11px}
+</style>
+</head>
+
+<body>
+<article>
+<h3 align="center"><strong>① 링크 달기</h3></strong>
+
+ <p><font color="orange">▶</font>하이퍼텍스트와 링크</p>
+  <ul>
+   <li>하이퍼텍스트 (hypertext)</li>
+    <ul>
+     <li>서로 연관된 문서나 텍스트 조각들을 연결하여 원하는 정보를 찾아갈 수 있도록<br>해 주는 것</li>
+     <li>하이퍼미디어는 텍스트 뿐만 아니라 이미지, 그래픽, 오디오, 비디오 등의<br>멀티미디어 정보가 서로 연결되어 있는 것을 나타냄</li>
+     <li>웹의 모든 정보 접근은 반드시 연결 링크를 선택하여 내비게이션을 하게 됨</li>
+     <li>하이퍼링크는 노드와 링크로 표현</li>
+    </ul><br>
+   <li>노드, 링크, 앵커의 개념</li>
+    <ul>
+     <li>노드 : HTML 문서나 멀티미디어 정보를 표현하는 기본단위</li>
+     <li>링크 : 노드를 연결하여 내비게이션이 가능하도록 하는 구성요소</li>
+     <li>앵커 : HTML 문서 내에서 링크의 출발점이나 도착점을 의미<br>-앵커 영역 : 앵커가 설정되어 있는 영역</li>
+    </ul><br>
+   <li>HTML 문서에서 사용되는 링크의 종류</li>
+    <ul>
+     <li> 외부 문서와 연결하는 링크</li>
+     <li>문서 내의 다른 지점으로의 링크 (책갈피 링크)</li>
+    </ul><br>
+  </ul>
+
+
+
+ <p><font color="orange">▶</font>문서 간 이동</p>
+  <ul>
+   <li>링크(link) - &lt;a&gt; 요소</li>
+<inside>&lt;a href=“파일 이름 혹은 URL 주소” title=“설명”&gt;링크 텍스트&lt;/a&gt;</inside><br><br>
+    <ul>
+     <li>href 속성 : 이동하고자 하는 문서의 위치를 지정</li>
+      <p>- 절대주소: URL 형식의 인터넷 주소</p>
+      <p>- 상대주소: 같은 폴더 위치에서 부터 상대 주소로 링크된 것으로 간주</p>
+     <li>title 속성 : 하이퍼링크에 설명을 하고 싶을 때 사용</li>
+    </ul><br>
+   <ul>
+     <li>target 속성 : 연결된 웹 문서를 여는 위치를 지정</li>
+      <p>º _self : 현재 창에서 열기(기본값)</p>
+      <p>º _blank : 새 창 또는 새 탭에서 열기</p>
+      <p>º _parent : 부모 프레임 창에서 열기</p>
+      <p>º _top: 최상위 프레임 창에서 열기</p>
+      <p>º 프레임 이름 : 이름이 지정된 프레임 위치에서 열기</p>
+    </ul>
+  </ul>
+
+
+
+ <p><font color="orange">▶</font>문서 내 특정 위치로 이동</p>
+  <ul>
+   <li>책갈피 링크</li>
+    <ul>
+     <li>동일한 문서 내에서 특정 지점으로 연결하는 방법</li>
+      <p>-링크가 설정된 시작점<br>&nbsp;&nbsp;&lt;a href=“#고유아이디”&gt;시작점 링크&lt;/a&gt;</p>
+      <p>-문서 내 이동할 목적지<br>&nbsp;&nbsp;&lt;a id=“고유아이디”gt;&lt;/a&gt;</p>
+    </ul>
+  </ul>
+
+</article>
+
+<article>
+<h3 align="center"><strong>② 이미지 사용하기</h3></strong>
+
+ <p><font color="orange">▶</font>이미지 파일 종류</p>
+  <ul>
+   <li>GIF(Graphic Interchange Format)</li>
+    <ul>
+     <li>JPEG, PNG에 비하 대체로 파일의 크기가 작다</li>
+     <li>표현 가능 색상이 256개이므로 자연스러운 실사 장면에는 부적합</li>
+     <li>사진이 아닌 클립아트나 드로잉 같은 종류의 이미지에 적합</li>
+    </ul><br>
+   <li>JPEG(Joint Photographic Experts Group)</li>
+    <ul>
+     <li>24비트의 칼라를 사용하므로 수백만 개의 색상을 표현</li>
+     <li>복잡한 그림이나 사진 등 색상을 많이 사용하는 이미지에 적합</li>
+    </ul><br>
+   <li>PNG(Portable Network Graphic)</li>
+    <ul>
+     <li> GIF와 JPEG 형식의 장점, 비압축 형식인 BMP 형식의 장점도 고려</li>
+     <li>24비트(또는 32비트) 칼라를 사용
+    </ul>
+  </ul>
+
+
+ <p><font color="orange">▶</font>이미지 삽입</p>
+  <ul>
+   <li>이미지 삽입- &lt;img&gt; 요소</li>
+<inside>&lt;img src=“파일 이름” width=“가로크기” height=“세로크기”&gt;</inside>
+<br><br>
+    <ul>
+     <li>src, width, height 속성</li>
+      <p>- src 속성에는 이미지 파일의 이름을 지정</p>
+      <p>- width와 height 속성은 이미지의 크기를 조정해 주며, 지정해 주지 않으면<br>이미지 본래 크기로 화면에 나타남</p>
+    </ul><br>
+    <ul>
+     <li> alt 속성</li>
+      <p>- alternate text(대체 텍스트)” 의 약어로, 이미지에 대한 설명 텍스트를 지정함</p>
+      <p>- 웹 페이지 화면에 이미지를 로드 하지 못할 경우 그 위치에 지정한 텍스트가<br>이미지 대신 출력됨</p>
+    </ul><br>
+ 
+
+  <ul>
+   <li> HTML5 에서 추가된 이미지 요소- &lt;figure&gt;, &lt;figcaption&gt;</li>
+    <ul>
+     <li>&lt;figure&gt; 요소</li>
+      <p>그림, 사진, 다이어그램과 텍스트 등의 콘텐츠를 함께 묶어서 하나의<br>독립된 단위로 취급할 때 사용</p>
+      <p>독립된 단위로 제거 하더라도 콘텐츠 흐름에 영향을 주지 않음</p>
+    </ul><br>
+     <li> &lt;figcaption&gt; 요소</li>
+      <p>- &lt;figure&gt; 요소를 위한 제목을 표현</p>
+      <p>- &lt;figure&gt; 요소 내에 위치</p>
+    </ul><br>
+
+  <ul>
+   <li> 이미지에 하이퍼링크 연결하기</li>
+<inside>&lt;a href = "링크할 곳의 파일이름"&gt;&lt;img src= "이미지 파일이름"&gt;&lt;/a&gt;</inside><br><br>
+  </ul>
+
+    <ul>
+     <li> 예시</li>
+<figure>
+ <table>
+  <tr>
+   <td><a href="https://namu.wiki/w/%EB%AA%AC%EC%8A%A4%ED%83%80%EC%97%91%EC%8A%A4" title="몬스타엑스"><img src="MX.jpg" alt="몬스타엑스" width="200"></a></td>
+   <td>몬스타엑스<br>2015.05.14 데뷔<br>스타쉽엔터테인먼트<br><h6>사진 클릭하면 나무위키로</h6></td>
+  </tr> 
+ </table>
+
+</figure>
+
+    </ul>
+  </ul>
+
+
+</article>
+
+
+<article>
+<h3 align="center"><strong>③ 객체 포함하기</h3></strong>
+
+ <p><font color="orange">▶</font>&lt;iframe&gt; 으로 문서 삽입하기</p>
+  <ul>
+   <li>&lt;iframe&gt; 요소</li>
+    <ul>
+     <li>브라우저 페이지 내에 또 다른 페이지 프레임을 삽입</li>
+     <li>src, width, height, name 속성</li>
+<inside>&lt;iframe src =“파일주소” width=“폭” height=“높이” name=“이름”&gt;&lt;/iframe&gt;</inside><br><br>
+           <p>src 속성 : 내부 프레임에 출력할 파일의 url 지정</p>
+      <p>width와 height 속성 : 브라우저 프레임의 가로, 높이 크기</p>
+       <p>name 속성 : 프레임의 이름</p>
+        <p><h5>ㄴ&lt;a&gt; 요소의 target 속성에 &lt;iframe&gt; 이름을 지정</h5></p>
+    </ul><br>
+   <li>예시</li>
+<p>몬스타엑스 팬카페</p>
+<iframe src ="https://cafe.daum.net/monsta-x" width="600" height="400"> </iframe><br><br>
+
+  </ul>
+ <p><font color="orange">▶</font>오디오/비디오 파일 종류</p>
+    <ul>
+     <li>MP3 (*.mp3) : MPEG Audio Layer-3</li>
+      <ul>
+       <li>MPEG-1의 오디오 규격으로 개발된 형식, 대중적으로 널리 사용</li>
+      </ul>
+    </ul><br>
+    <ul>
+     <li>Wave (*.wav, *.wave)</li>
+      <ul>
+       <li>마이크로소프트와 IBM이 개발, 비압축 방식의 오디오 형식</li>
+      </ul>
+    </ul><br>
+    <ul>
+     <li>MPEG4 (*.mp4, *.m4v)</li>
+      <ul>
+       <li>MPEG-4의 part14에서 규정된 비디오 파일 형식, H.264 코덱 사용</li>
+      </ul>
+    </ul><br>
+    <ul>
+     <li>Ogg (*.ogg, *.ogv)</li>
+      <ul>
+       <li>스트리밍 방식의 멀티미디어 표현을 위한 공개소스 기반 형식</li>
+       <li>Vorbis, FLAC 등의 오디오 코덱, OggTheora 등의 비디오 코덱 사용</li>
+      </ul>
+    </ul><br>
+    <ul>
+     <li>WebM (*.webm)</li>
+      <ul>
+       <li>구글이 HTML5의 동영상에 사용하기 위해 최근에 개발</li>
+      </ul>
+    </ul><br>
+  <p><font color="orange">▶</font>오디오 삽입하기</p>
+    <ul>
+     <li>&lt;audio&gt; 요소</li>
+      <p>웹 브라우저에서 바로 음악을 재생할 수 있게 삽입할 수 있음</p>
+<inside>&lt;audio controls autoplay src="재생할 사운드 파일 이름"&gt;</inside><br><br>
+      <ul>
+       <li>src 속성 : 사운드 파일 이름</li>
+       <li>controls 속성 : 기본적인 미디어 제어기를 표시할 지 여부</li>
+       <li>autoplay 속성 : 파일이 로드되자 마자 자동으로 재생시킨다는 의미</li>
+       <li>loop 속성 : 사운드를 반복 재생시킬 횟수</li>
+<hr>
+	 <li>&lt;audio&gt; 요소의 preload 속성</li>
+        <ul>
+         <p>-미리 로드되어야 하는 지의 여부를 지정</p>
+         <p>-preload 속성값</p>
+           <ul>
+            <li>auto(기본값) : 페이지를 로드하고 바로 오디오 파일을 다운로드</li>
+            <li>metadata : 사용자가 재생 시키기 전까지는 오디오의 크기,<br>관련 정보 등과 같은 메타데이터만 다운로드</li>
+            <li>none : 재생을 시작 하기 전까지 오디오 파일을 다운로드 안함</li>
+           </ul>
+        </ul>
+      </ul><br>
+    </ul>
+
+    <ul>
+     <li>&lt;source&gt; 요소와 같이 사용하기</li>
+      <ul>
+       <li>웹 브라우저에서 오디오 파일이 지원되지 않는 경우를 대비</li>
+       <li>&lt;source&gt; 요소에서 같은 내용을 여러 형식으로 작성한 파일 지정</li>
+       <li>src 및 type 속성 : 오디오 파일의 이름 및 MIME 형식을 지정</li>
+        <ul>
+         <p>-예, audio/mp3, audio/ogg, audio/wav 와 같이 지정</p>
+         <p>-오디오 파일 로드 전에 순서대로 재생가능 여부를 확인</p>
+<inside>&lt;audio controls autoplay&gt;<br>
+&nbsp;&lt;source src="song.mp3" type="audio/mp3"&gt;<br>
+&nbsp;&lt;source src="song.ogg" type="audio/ogg"&gt;<br>
+&nbsp;&lt;source src="song.wav" type="audio/wav"&gt;<br>
+&lt;audio controls autoplay&gt;</inside><br><br><br><br><br><br>
+        </ul>
+      </ul>
+<li>예시</li><br>
+<p>몬스타엑스 _ I got love</p>
+<audio controls autoplay>
+  <source src="i got love.mp3" type="audio/mp3">
+  <source src="i got love.ogg" type="audio/ogg">
+  <source src="i got love.wav" type="audio/wav">
+</audio>
+
+    </ul><br>
+
+ <p><font color="orange">▶</font>비디오 삽입하기</p>
+    <ul>
+     <li>&lt;video&gt; 요소</li>
+<inside>&lt;video controls src="비디오 파일 이름" width="폭" height="높이"&gt;</inside><br><br>
+      <ul>
+       <li>src, controls, loop, autoplay 속성: &lt;audio&gt; 요소의 속성과 동일
+</li>
+       <li>&lt;source&gt; 요소에서 같은 내용을 여러 형식으로 작성한 파일 지정</li>
+       <li>width, height 속성: 화면에서 비디오가 표시될 영역의 크기</li>
+       <li>poster 속성: 동영상이 로딩되고 있을 때 보여줄 이미지</li>
+<hr>
+	 <li>preload 속성: 브라우저가 미리 동영상을 로딩 할 지 여부</li>
+         <p>- auto(기본값) : 페이지를 로드하고 바로 비디오 파일을 다운로드</p>
+         <p>- metadata : 사용자가 재생 시키기 전까지는 비디오의 크기, 첫 프레임,<br>비디오 관련 정보 등과 같은 메타데이터만 다운로드</p>
+         <p>none : 재생 시작 전까지 비디오 파일을 다운로드 안함</p>
+<inside>&nbsp;&nbsp;&lt;video width="360" height="240" src="wildlife.mp4" controls preload="none"&gt;<br>
+&nbsp;&nbsp;&lt;/video&gt;<br>
+&nbsp;&nbsp;&lt;video width="360" height="240" src="pip.mp4" controls preload="metadata"&gt;<br>
+&nbsp;&nbsp;&lt;/video&gt;</inside><br><br><br><br><br>
+      </ul>
+<li>예시</li>
+<p>몬스타엑스 _ Beautiful Liar MV</p>
+<video width="500" src="Beautiful Liar.mp4" controls preload="metadata">
+비디오를 재생할 수 없습니다. 
+</video>
+    </ul>
+</ul>
+
+
+</article>
+</body>
+</html>
